@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DispatcherService } from '../../services/dispatcher.service';
-import { Dispatcher } from '../../@models/interfaces/dispatcher';
 import { Dispatcher } from '../../@models/tokens/dispatcher';
 
 @Component({
