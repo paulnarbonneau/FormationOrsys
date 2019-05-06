@@ -46,3 +46,25 @@ genre un fil de discussion
 
 forRoot => on definit des routes pour le niveau 0 de l'appli /epargne /snd
 forChild => on définit des routes pour un sous niveau /epargne/toto
+
+
+typescript ne verifie pas les types au runtime. Il faut implementer cette verification au sein meme de la classe.
+
+
+
+pour grouper les logs :
+console.groupCollapsed('Nom');
+console.log ..... console.warn ...
+console.table(<obj>); affiche l'objet sous forme de tableau key - value
+console.groupEnd();
+
+
+constructor(
+private render:RenderElement2
+private elm:ElementRef)
+{
+console.warn(elm.nativeElement);
+}
+
+element "elm" renvoie le dom de l'element qui permet de chopper l'id de la div parente.
+
