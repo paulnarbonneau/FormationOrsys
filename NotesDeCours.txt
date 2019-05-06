@@ -1,0 +1,27 @@
+
+ng g m features/login -m=app --project=ng-ground
+ng g m features/list -m=app --project=ng-ground
+ ng g m shared -m=app --project=ng-ground
+ng g m shared -m=features/list -f --project=ng-ground
+ng g m shared -m=features/login -f --project=ng-ground
+
+# On vire le app.component.* définis par défaut pour tout gérer dans le module main
+ng g m main -m=app --routing --project=ng-ground
+
+# on met l'option -it et -is pour ne pas cacher le build du composant et accelerer le build
+ng g c components/cmp-button --project=ng-ground -it -is
+
+ng g c components/cmp-header --project=ng-ground --export
+ng g c components/cmp-searchbar --project=ng-ground --export
+ng g c main/main --project=ng-ground --export
+ng g c screens/screen-login --project=ng-ground --export
+ng g c screens/screen-list --project=ng-ground --export
+
+ng g c features/login/login --project=ng-ground --export
+ng g c features/list/list --project=ng-ground --export
+
+
+
+
+######
+si un composant a besoin de faire appel à plusieurs services alors il faut créer un service de facade qui va orchestrer l'appel aux services
