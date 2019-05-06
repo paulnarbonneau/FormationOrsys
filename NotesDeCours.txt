@@ -25,3 +25,24 @@ ng g c features/list/list --project=ng-ground --export
 
 ######
 si un composant a besoin de faire appel à plusieurs services alors il faut créer un service de facade qui va orchestrer l'appel aux services
+
+creer un service qui gere les transactions réseau, qui sera appele par tous les autres services
+
+ng g s services/dispatcher --project=ng-ground
+ng g s services/auth --project=ng-ground
+ng g s services/data --project=ng-ground
+ng g s services/storage --project=ng-ground
+
+
+javadoc angular : npm i @compodoc/compodoc
+
+
+
+provider un service au niveau d'un composant au lieu du niveau root est utile pour des fonctions partagées 
+genre un fil de discussion
+
+
+###Routes 
+
+forRoot => on definit des routes pour le niveau 0 de l'appli /epargne /snd
+forChild => on définit des routes pour un sous niveau /epargne/toto

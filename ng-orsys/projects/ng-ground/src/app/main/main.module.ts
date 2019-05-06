@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ScreensModule } from '../screens/screens.module';
 import { LoginModule } from '../features/login/login.module';
 import { ListModule } from '../features/list/list.module';
+import { DispatcherService } from '../services/dispatcher.service';
 
 @NgModule({
   declarations: [MainComponent],
@@ -17,6 +18,9 @@ import { ListModule } from '../features/list/list.module';
     ListModule,
     SharedModule,
     MainRoutingModule
+  ],
+  providers:[
+    {provide:'Dispatcher', useClass:DispatcherService}
   ],
   exports: [MainComponent]
 })

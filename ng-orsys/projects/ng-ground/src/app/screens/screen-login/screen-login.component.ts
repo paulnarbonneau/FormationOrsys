@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DispatcherService } from '../../services/dispatcher.service';
+import { Dispatcher } from '../../@models/interfaces/dispatcher';
 
 @Component({
   selector: 'app-screen-login',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject('Dispatcher') private dispatcher : Dispatcher) { }
 
   ngOnInit() {
   }
