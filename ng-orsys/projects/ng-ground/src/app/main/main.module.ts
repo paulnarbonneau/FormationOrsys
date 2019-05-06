@@ -8,6 +8,7 @@ import { ScreensModule } from '../screens/screens.module';
 import { LoginModule } from '../features/login/login.module';
 import { ListModule } from '../features/list/list.module';
 import { DispatcherService } from '../services/dispatcher.service';
+import { Dispatcher } from '../@models/tokens/dispatcher';
 
 @NgModule({
   declarations: [MainComponent],
@@ -20,7 +21,7 @@ import { DispatcherService } from '../services/dispatcher.service';
     MainRoutingModule
   ],
   providers:[
-    {provide:'Dispatcher', useClass:DispatcherService}
+    {provide:Dispatcher, useClass:DispatcherService}
   ],
   exports: [MainComponent]
 })
