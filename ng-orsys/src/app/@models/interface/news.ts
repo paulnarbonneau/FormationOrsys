@@ -1,4 +1,4 @@
-export interface MetaNews {
+export interface News {
     id?:string;
     title:string;
     content:string;

@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { GobalRootInjector } from './main.injector';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { NewsService } from '../@services/news.service';
 
 
 @NgModule({
@@ -17,5 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 export class MainModule {
   constructor(injector : Injector){
     GobalRootInjector(injector);
+    const news = injector.get(NewsService)
+    console.log(news)
+    news.getNews('programming').subscribe(()=>true)
   }
  }

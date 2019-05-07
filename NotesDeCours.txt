@@ -100,3 +100,8 @@ Observable : mele promise et eventemitter
 
 Toujours unsubscribe pour eviter les fuites memoire
 Subsink est un outil qui aide à ça
+
+
+
+Bonne pratique : ne pas mettre trop de membres dans les classes car Angular crée une classe de surveillance dans chaque component pour surveiller les changements 
+(OnChange Detection)
