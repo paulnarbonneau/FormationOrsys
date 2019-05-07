@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { GobalRootInjector } from './main.injector';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [MainComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   bootstrap: [MainComponent]
 })

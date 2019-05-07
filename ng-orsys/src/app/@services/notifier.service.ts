@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable ,EventEmitter} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NotifierService {
+export class NotifierService extends  EventEmitter<{name:string,payload:any}>{
 
-  constructor() { }
+  constructor() {super(); }
+
+  notify(event:{name:string,payload:any}) {
+    this.emit(event);
+  }
 }

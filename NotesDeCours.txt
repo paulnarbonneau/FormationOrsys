@@ -82,3 +82,12 @@ Cette annotation a été créee pour à la fois injecter le dispatcher et le not
 Cette annotation intercepte l'appel de la fonction et execute un traitement avant d'executer la fonction.
 
 une librairie cool de decorateurs : ****helpful-decorators****
+@Memo : met en cache le resultat d'une fonction
+
+
+
+point java script
+callback : pas bien car c'est le producer qui ingere le consumer pour en voyer les datas et 0 chainage possible, inversion de responsabilite
+eventEmitter : mieux mais 0 chainage
+Promise : Super pour le chainage et respecte les repsonsabilites
+Observable : mele promise et eventemitter

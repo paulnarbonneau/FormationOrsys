@@ -9,12 +9,13 @@ export function StateSubscriber<T extends {new(...args:any[]):{}}>(constructor:T
     }
 }
 
-export function Notify(event: string) {
+export function Notify(eventName: string) {
+    
     return function (target: any, key: string, descriptor: PropertyDescriptor) {
         const _captured = target[key];
         descriptor.value = (...args):any|void => {
             const computedValue = _captured.apply(target,args);
-            alert(event + computedValue);1.0
+            console.warn(eventName + computedValue);
             return computedValue;
         }
     };
