@@ -68,3 +68,8 @@ console.warn(elm.nativeElement);
 
 element "elm" renvoie le dom de l'element qui permet de chopper l'id de la div parente.
 
+
+npx est l'utilitaire de npm pour executer des scripts en allant chercher dans le node_modules.
+
+npx tsc xxx.ts -target es6   va transpiler le fichier xxx.ts dans le repertoire courant.
+
