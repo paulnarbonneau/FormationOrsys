@@ -1,11 +1,11 @@
-import { GobalRootInjector } from '../../main/main.injector';
+import { GlobalRootInjector } from '../../main/main.injector';
 import { NotifierService } from '../../@services/notifier.service';
 import { DispatcherService } from '../../@services/dispatcher.service';
 
 export function StateSubscriber<T extends {new(...args:any[]):{}}>(constructor:T) {
     return class extends constructor {
-        notifier = GobalRootInjector().get(NotifierService)
-        dispatcher = GobalRootInjector().get(DispatcherService)
+        notifier = GlobalRootInjector().get(NotifierService)
+        dispatcher = GlobalRootInjector().get(DispatcherService)
     }
 }
 

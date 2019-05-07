@@ -1,4 +1,4 @@
-export interface News {
+export interface NNews {
     id?:string;
     title:string;
     content:string;

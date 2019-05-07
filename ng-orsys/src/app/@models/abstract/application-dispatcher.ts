@@ -1,6 +1,6 @@
-import { GobalRootInjector } from '../../main/main.injector';
+import { GlobalRootInjector } from '../../main/main.injector';
 import { DispatcherService } from '../../@services/dispatcher.service';
 
 export abstract class ApplicationDispatcher {
-    dispatcher = GobalRootInjector().get(DispatcherService)
+    dispatcher = GlobalRootInjector().get(DispatcherService)
 }

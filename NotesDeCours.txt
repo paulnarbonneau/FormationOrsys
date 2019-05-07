@@ -105,3 +105,31 @@ Subsink est un outil qui aide à ça
 
 Bonne pratique : ne pas mettre trop de membres dans les classes car Angular crée une classe de surveillance dans chaque component pour surveiller les changements 
 (OnChange Detection)
+
+Si on veut desactiver la detection des changements il suffit d'ajouter le code changeDetection:ChangeDetectionStrategy.OnPush dans le decorateur du composant
+Pour le reactiver à la volée dans le code, il faut que le constructeur injecte le ChangeDetectorRef
+
+constructor(cd:ChangeDetectorRef) {
+    let i =0;
+    setInterval( ()=> this.demo += String(i++), 2500)
+
+    setTimeout( ()=> cd.markForCheck() , 10000)
+
+  }
+  
+  Au bout de 10s le composant va se rendre dispo pour le rendu (il attend son tour)
+  cd.detectChanges rend immediatement meme si les datas sont en cours de modifs
+  
+  
+  
+  
+  zone.js : utile pour executer du code hors angular (pour les graphes par ex)
+  
+  
+  pour creer un package npm : npm pack ./dist/<lib name>
+  
+  
+  
+  ##### Forms
+  
+  ng schema form
