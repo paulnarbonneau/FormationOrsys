@@ -91,3 +91,12 @@ callback : pas bien car c'est le producer qui ingere le consumer pour en voyer l
 eventEmitter : mieux mais 0 chainage
 Promise : Super pour le chainage et respecte les repsonsabilites
 Observable : mele promise et eventemitter
+
+
+
+
+
+
+
+Toujours unsubscribe pour eviter les fuites memoire
+Subsink est un outil qui aide à ça
