@@ -175,7 +175,11 @@
       "sourceRoot": "projects/ng-ground/src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -190,7 +194,7 @@
               "projects/ng-ground/src/assets"
             ],
             "styles": [
-              "projects/ng-ground/src/styles.css"
+              "projects/ng-ground/src/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -247,7 +251,7 @@
             "tsConfig": "projects/ng-ground/tsconfig.spec.json",
             "karmaConfig": "projects/ng-ground/karma.conf.js",
             "styles": [
-              "projects/ng-ground/src/styles.css"
+              "projects/ng-ground/src/styles.scss"
             ],
             "scripts": [],
             "assets": [

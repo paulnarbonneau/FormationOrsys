@@ -5,16 +5,16 @@ import { ScreenListComponent } from '../screens/screen-list/screen-list.componen
 
 const routes: Routes = [
   {
-    path : 'list', component : ScreenListComponent
+    path:'admin',
+    loadChildren:'../admin/admin.module#AdminModule',
   },
   {
-    path : 'admin', loadChildren : '../admin/admin.module#AdminModule'
+    path:'list',
+    component:ScreenListComponent
   },
   {
-    path : 'login',component : ScreenLoginComponent
-  },
-  {
-    path : '**', redirectTo : 'login', pathMatch : 'full'
+    path:'login',
+    component:ScreenLoginComponent
   }
 ];
 

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cmp-header',
   templateUrl: './cmp-header.component.html',
-  styleUrls: ['./cmp-header.component.css']
+  styleUrls: ['./cmp-header.component.scss']
 })
 export class CmpHeaderComponent implements OnInit {
 

@@ -1,26 +1,29 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HoverZoomDirective } from '../hover-zoom.directive';
 
 @Component({
   selector: 'app-cmp-button',
   template: `
-    <button>
+    <div [appHoverZoom] #hover="HoverZoom" (click)="hover.zoomIn()">
+      {{title}}  
       <strong><ng-content select=".info"></ng-content></strong>
       <ng-content></ng-content>
-    </button>
+    </div>
   `,
   styles: []
 })
-export class CmpButtonComponent implements OnInit {
+export class CmpButtonComponent  {
 
-  constructor(private render:Renderer2,private elm:ElementRef) { 
+  // @ViewChild('hover') hover;
+  @ViewChild(HoverZoomDirective) hover;
 
+  title = 123;
 
-  }
+  constructor() { }
 
-  ngOnInit() {
-    console.groupCollapsed('Directive Bouton')
-    console.log(`elm = ${JSON.stringify(this.elm.nativeElement)}`);
-    console.groupEnd();
+  ngAfterViewInit() {
+
+    console.warn(456, this.hover);
   }
 
 }

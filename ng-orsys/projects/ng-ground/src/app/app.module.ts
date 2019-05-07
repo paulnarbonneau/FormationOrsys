@@ -1,22 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { ScreensModule } from './screens/screens.module';
-import { LoginModule } from './features/login/login.module';
-import { ListModule } from './features/list/list.module';
-import { SharedModule } from './shared/shared.module';
+import { NgModule, Injector } from '@angular/core';
 import { MainModule } from './main/main.module';
 import { MainComponent } from './main/main/main.component';
+import { Dispatcher } from './@models/tokens/dispatcher';
+import { AppDispatcher } from './@models/interfaces/dispatcher';
+
+export let AppInjector; 
 
 @NgModule({
   declarations: [
-   
   ],
   imports: [
     BrowserModule,
     MainModule
   ],
   providers: [],
-  bootstrap: [MainComponent]
+  bootstrap: [MainComponent],
+  exports: []
 })
-export class AppModule { }
+export class AppModule { 
+  constructor( injector:Injector){
+    AppInjector = injector;
+  }
+}
+

@@ -7,7 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [ScreenLoginComponent, ScreenListComponent],
   imports: [
-    CommonModule, SharedModule
+    CommonModule,
+    SharedModule
   ],
   exports: [ScreenLoginComponent, ScreenListComponent]
 })

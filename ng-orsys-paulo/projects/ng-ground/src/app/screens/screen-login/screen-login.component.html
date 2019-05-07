@@ -1,0 +1,21 @@
+<p>
+  screen-login works!
+</p>
+<app-cmp-button >
+  <span class="info">Info</span>
+  hello
+</app-cmp-button>
+
+<input type="text" [(ngModel)]="search" required #searchField="ngModel">
+{{search}}
+<button *ngIf="searchField.valid">OK</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="http://unsplash.it/150" alt="" [appHoverZoom] #effect="HoverZoom"
+ (click)="effect.zoomIn()"
+ (mouseleave)="effect.zoomOut()">

@@ -1,5 +1,5 @@
 export interface AppNews {
-    id? : number;
+    id?:number;
     title:string;
     picture?:string;
     content:string;

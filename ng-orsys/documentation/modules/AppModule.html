@@ -169,24 +169,19 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
-
-import { ScreensModule } from &#x27;./screens/screens.module&#x27;;
-import { LoginModule } from &#x27;./features/login/login.module&#x27;;
-import { ListModule } from &#x27;./features/list/list.module&#x27;;
-import { SharedModule } from &#x27;./shared/shared.module&#x27;;
 import { MainModule } from &#x27;./main/main.module&#x27;;
 import { MainComponent } from &#x27;./main/main/main.component&#x27;;
 
 @NgModule({
   declarations: [
-   
   ],
   imports: [
     BrowserModule,
     MainModule
   ],
   providers: [],
-  bootstrap: [MainComponent]
+  bootstrap: [MainComponent],
+  exports: []
 })
 export class AppModule { }
 </code></pre>

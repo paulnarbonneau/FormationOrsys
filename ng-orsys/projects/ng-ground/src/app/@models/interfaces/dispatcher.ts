@@ -1,7 +1,6 @@
-import { AppAction } from './action';
 import { Observable } from 'rxjs';
+import { AppAction } from './action';
 
 export interface AppDispatcher {
-
-    dispatch (action) : Observable<AppAction>
+    dispatch( action:AppAction ):Observable<AppAction>
 }
